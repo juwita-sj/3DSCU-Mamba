@@ -8,4 +8,4 @@
   
 </p>
 
-![w:800px](imgs/overview2.png)
+![w:800px](GA_ieeeaccess.jpg)
