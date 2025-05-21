@@ -8,4 +8,4 @@
   
 </p>
 
-![w:800px](GA_Y.jpg)
+![w:800px](GA_ieeeaccess.jpg)
