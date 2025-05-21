@@ -1,4 +1,6 @@
 # 3DSCU-Mamba
+Official repository for3D-SCUMamba: An Abdominal Tumor Segmentation model
+
 <div align="center">
 
 
@@ -14,20 +16,19 @@
 
 
 
-# [U-Mamba](https://wanglab.ai/u-mamba.html)
 
-Official repository for U-Mamba: Enhancing Long-range Dependency for Biomedical Image Segmentation.
-Welcome to join our [mailing list](https://forms.gle/bLxGb5SEpdLCUChQ7) to get updates.
+
+
 
 ## Installation 
 
 Requirements: `Ubuntu 20.04`, `CUDA 11.8`
 
-1. Create a virtual environment: `conda create -n umamba python=3.10 -y` and `conda activate umamba `
+1. Create a virtual environment: `conda create -n 3dscu python=3.10 -y` and `conda activate 3dscu `
 2. Install [Pytorch](https://pytorch.org/get-started/previous-versions/#linux-and-windows-4) 2.0.1: `pip install torch==2.0.1 torchvision==0.15.2 --index-url https://download.pytorch.org/whl/cu118`
 3. Install [Mamba](https://github.com/state-spaces/mamba): `pip install causal-conv1d>=1.2.0` and `pip install mamba-ssm --no-cache-dir`
-4. Download code: `git clone https://github.com/bowang-lab/U-Mamba`
-5. `cd U-Mamba/umamba` and run `pip install -e .`
+4. Download code: `git clone https://github.com/juwita-sj/3DSCU`
+5. `cd 3dscu/3dscu` and run `pip install -e .`
 
 
 sanity test: Enter python command-line interface and run
@@ -36,13 +37,6 @@ sanity test: Enter python command-line interface and run
 import torch
 import mamba_ssm
 ```
-
-![network](https://github.com/bowang-lab/U-Mamba/blob/main/assets/U-Mamba-network.png)
-
-
-
-https://github.com/bowang-lab/U-Mamba/assets/19947331/1ac552d6-4ffd-4909-ba31-7b48644fd104
-
 
 
 
