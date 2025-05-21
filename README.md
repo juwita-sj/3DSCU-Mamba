@@ -41,7 +41,7 @@ import mamba_ssm
 
 
 ## Model Training
-Download dataset [here](https://drive.google.com/drive/folders/1DmyIye4Gc9wwaA7MVKFVi-bWD2qQb-qN?usp=sharing) and put them into the `data` folder. U-Mamaba is built on the popular [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework. If you want to train U-Mamba on your own dataset, please follow this [guideline](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md) to prepare the dataset. 
+Download dataset from `data` folder. 3DSCU-Mamba is built on the popular [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) framework. If you want to train 3DSCU-Mamba on your own dataset, please follow this [guideline](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md) to prepare the dataset. 
 
 ### Preprocessing
 
@@ -49,7 +49,7 @@ Download dataset [here](https://drive.google.com/drive/folders/1DmyIye4Gc9wwaA7M
 nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity
 ```
 
-### Train 2D models
+### Train 3D models
 
 - Train 2D `U-Mamba_Bot` model
 
