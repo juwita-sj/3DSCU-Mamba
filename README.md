@@ -13,18 +13,21 @@ Official repository for3D-SCUMamba: An Abdominal Tumor Segmentation model
 ![w:800px](GA_ieeeaccess.jpg)
 
 
+## Dataset
+The datasets used to evaluate 3D-SCU Mamba can be accessed via the following link:
+
+MSD Pancreas Dataset – Task 10 (Colon Cancer) and Task 07 (Pancreas):
+https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2
+
+## Dataset Preparation
+3D-SCU follows the preprocessing and training scenarios provided by the nnU-Net framework.
+We gratefully acknowledge and credit the nnU-Net framework.
+For dataset preparation details, we kindly refer readers to the original nnU-Net documentation.
 
 
+## To install and run the Mamba procedure, we gratefully acknowledge the work by Bowang Lab.
+Please follow the installation instructions provided in their repository and ensure that all dependencies are properly fulfilled [here](https://github.com/bowang-lab/U-Mamba)
 
-
-
-## Dataset 
-Dataset yang kami gunakan untuk mengevaluasi 3D-SCU mamba dapat diakses melalui link berikut 
-1. MSD Pancreas dataset 
-2. 
-
-## Installation 
-to do the installastion 
 
 Requirements: `Ubuntu 20.04`, `CUDA 11.8`
 
@@ -55,80 +58,38 @@ nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity
 
 ### Train 3D models
 
-- Train 2D `U-Mamba_Bot` model
 
 ```bash
-nnUNetv2_train DATASET_ID 2d all -tr nnUNetTrainerUMambaBot
-```
-
-- Train 2D `U-Mamba_Enc` model
-
-```bash
-nnUNetv2_train DATASET_ID 2d all -tr nnUNetTrainerUMambaEnc
+nnUNetv2_train DATASET_ID 3d all -tr nnUNetTrainerU3dSCU
 ```
 
 ### Train 3D models
 
-- Train 3D `U-Mamba_Bot` model
+- Train 3D `3dSCU` model
 
 ```bash
-nnUNetv2_train DATASET_ID 3d_fullres all -tr nnUNetTrainerUMambaBot
+nnUNetv2_train DATASET_ID 3d_lowres all -tr nnUNetTrainer3dSCU
 ```
 
-- Train 3D `U-Mamba_Enc` model
 
-```bash
-nnUNetv2_train DATASET_ID 3d_fullres all -tr nnUNetTrainerUMambaEnc
-```
 
 
 ## Inference
 
-- Predict testing cases with `U-Mamba_Bot` model
+- Predict testing cases with `3DSCU` model
 
 ```bash
-nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION -f all -tr nnUNetTrainerUMambaBot --disable_tta
+nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION -f all -tr nnUNetTrainer3DSTU --disable_tta
 ```
 
-- Predict testing cases with `U-Mamba_Enc` model
+-
 
-```bash
-nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION -f all -tr nnUNetTrainerUMambaEnc --disable_tta
-```
 
-> `CONFIGURATION` can be `2d` and `3d_fullres` for 2D and 3D models, respectively.
-
-## Remarks
-
-1. Path settings
-
-The default data directory for U-Mamba is preset to U-Mamba/data. Users with existing nnUNet setups who wish to use alternative directories for `nnUNet_raw`, `nnUNet_preprocessed`, and `nnUNet_results` can easily adjust these paths in umamba/nnunetv2/path.py to update your specific nnUNet data directory locations, as demonstrated below:
-
-```python
-# An example to set other data path,
-base = '/home/user_name/Documents/U-Mamba/data'
-nnUNet_raw = join(base, 'nnUNet_raw') # or change to os.environ.get('nnUNet_raw')
-nnUNet_preprocessed = join(base, 'nnUNet_preprocessed') # or change to os.environ.get('nnUNet_preprocessed')
-nnUNet_results = join(base, 'nnUNet_results') # or change to os.environ.get('nnUNet_results')
-```
-
-2. AMP could lead to nan in the Mamba module. We also provide a trainer without AMP: https://github.com/bowang-lab/U-Mamba/blob/main/umamba/nnunetv2/training/nnUNetTrainer/nnUNetTrainerUMambaEncNoAMP.py
-
-## Paper
-
-```
-@article{U-Mamba,
-    title={U-Mamba: Enhancing Long-range Dependency for Biomedical Image Segmentation},
-    author={Ma, Jun and Li, Feifei and Wang, Bo},
-    journal={arXiv preprint arXiv:2401.04722},
-    year={2024}
-}
-```
 
 
 ## Acknowledgements
 
-We acknowledge all the authors of the employed public datasets, allowing the community to use these valuable resources for research purposes. We also thank the authors of [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) and [U-Mamba](https://github.com/state-spaces/mamba) for making their valuable code publicly available.
+We acknowledge all the authors of the employed public datasets, allowing the community to use these valuable resources for research purposes. We also thank the authors of [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) and [U-Mamba]([https://github.com/state-spaces/mamba](https://github.com/bowang-lab/U-Mamba)) for making their valuable code publicly available.
 
 
 
