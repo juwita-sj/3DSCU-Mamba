@@ -76,7 +76,7 @@ nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION
 
 ## Acknowledgements
 
-We thank the authors of [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) and [U-Mamba]([https://github.com/state-spaces/mamba](https://github.com/bowang-lab/U-Mamba)) for making their valuable code publicly available.
+We thank the authors of [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) and [U-Mamba](https://github.com/bowang-lab/U-Mamba) for making their valuable code publicly available.
 
 
 
