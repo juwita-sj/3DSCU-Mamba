@@ -18,9 +18,13 @@ Official repository for3D-SCUMamba: An Abdominal Tumor Segmentation model
 
 
 
-
+## Dataset 
+Dataset yang kami gunakan untuk mengevaluasi 3D-SCU mamba dapat diakses melalui link berikut 
+1. MSD Pancreas dataset 
+2. 
 
 ## Installation 
+to do the installastion 
 
 Requirements: `Ubuntu 20.04`, `CUDA 11.8`
 
