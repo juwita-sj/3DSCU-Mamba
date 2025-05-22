@@ -58,20 +58,11 @@ nnUNetv2_plan_and_preprocess -d DATASET_ID --verify_dataset_integrity
 
 ### Train 3D models
 
-
-```bash
-nnUNetv2_train DATASET_ID 3d all -tr nnUNetTrainerU3DST
-```
-
-### Train 3D models
-
 - Train 3D `3dSCU` model
 
 ```bash
 nnUNetv2_train DATASET_ID 3d_lowres all -tr nnUNetTrainerU3DST
 ```
-
-
 
 
 ## Inference
@@ -81,7 +72,6 @@ nnUNetv2_train DATASET_ID 3d_lowres all -tr nnUNetTrainerU3DST
 ```bash
 nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION -f all -tr nnUNetTrainerU3DST --disable_tta
 ```
-
 
 
 ## Acknowledgements
