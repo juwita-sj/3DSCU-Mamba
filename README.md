@@ -82,14 +82,11 @@ nnUNetv2_train DATASET_ID 3d_lowres all -tr nnUNetTrainer3dSCU
 nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_ID -c CONFIGURATION -f all -tr nnUNetTrainer3DSTU --disable_tta
 ```
 
--
-
-
 
 
 ## Acknowledgements
 
-We acknowledge all the authors of the employed public datasets, allowing the community to use these valuable resources for research purposes. We also thank the authors of [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) and [U-Mamba]([https://github.com/state-spaces/mamba](https://github.com/bowang-lab/U-Mamba)) for making their valuable code publicly available.
+We thank the authors of [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) and [U-Mamba]([https://github.com/state-spaces/mamba](https://github.com/bowang-lab/U-Mamba)) for making their valuable code publicly available.
 
 
 
