@@ -16,7 +16,7 @@ Official repository for3D-SCUMamba: An Abdominal Tumor Segmentation model
 ## Dataset
 The datasets used to evaluate 3D-SCU Mamba can be accessed via the following link:
 
-#MSD Pancreas Dataset – Task 10 (Colon Cancer) and Task 07 (Pancreas):
+# MSD Pancreas Dataset – Task 10 (Colon Cancer) and Task 07 (Pancreas):
 https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2
 
 #Synapse BTCV tumor Dataset:
