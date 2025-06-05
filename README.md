@@ -1,4 +1,4 @@
-# 3DSCU-Mamba
+# 3D-SCUMamba
 Official repository for3D-SCUMamba: An Abdominal Tumor Segmentation model
 
 <div align="center">
@@ -20,7 +20,8 @@ The datasets used to evaluate 3D-SCU Mamba can be accessed via the following lin
 https://drive.google.com/drive/folders/1HqEgzS8BV2c7xYNrZdEAnrHk7osJJ--2
 
 #### Synapse BTCV tumor Dataset:
-https://www.synapse.org/Synapse:syn3193805/files/ %which is accessible at \href{https://www.synapse.org/#!Synapse:syn3193805/wiki/89480}{Link to Synapse Dataset
+https://www.synapse.org/Synapse:syn3193805/files/. 
+The dataset used to test 3D-SCUMAMBA is accessible at \href{https://www.synapse.org/#!Synapse:syn3193805/wiki/89480}
 
 ## Dataset Preparation
 3D-SCU follows the preprocessing and training scenarios provided by the nnU-Net framework.
